@@ -1,0 +1,23 @@
+{
+  "name": "woe-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GN4RK/woe-bot.git"
+  },
+  "author": "GN4RK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GN4RK/woe-bot/issues"
+  },
+  "homepage": "https://github.com/GN4RK/woe-bot#readme",
+  "dependencies": {
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5"
+  }
+}
