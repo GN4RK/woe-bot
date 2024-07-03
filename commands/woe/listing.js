@@ -13,11 +13,31 @@ module.exports = {
         const message_id = interaction.options.getString('message_id');
         const message = await interaction.channel.messages.fetch(message_id);
         const reactions = message.reactions.cache;
+        const emojiToClass = {
+            '🧹': 'DLP',
+            '🎸': 'Clown',
+            '🍼': 'SPP',
+            '🛡️': 'Paladin',
+            '✝️': 'HP',
+            '📚': 'FS Prof',
+            '👼': 'Soul Linker',
+            '🐌': 'Slow Grace',
+            '💳': 'Tarot',
+            '✨': 'FS HW',
+            '🧙': 'DD HW',
+            '👊': 'Champion',
+            '⚡': 'Stalker',
+            '🏹': 'Sniper',
+            '🕯️': 'DD Chem',
+        };
         
         // get all the users that reacted to the message sorted by the emoji they reacted with
         let users = {};
         reactions.forEach(reaction => {
-            const emoji = reaction.emoji.name;
+            let emoji = reaction.emoji.name;
+            if (emoji in emojiToClass) {
+                emoji = emojiToClass[emoji];
+            }
             users[emoji] = reaction.users.cache.map(user => user.displayName);
         });
 
