@@ -20,6 +20,7 @@ module.exports = {
             '🍼': 'SPP Chem',
             '👊': 'Champion',
             '🏹': 'Sniper',
+            '🚿': 'Sniper FA/Effect',
             '✝️': 'HP',
             '🐌': 'Gypsy',
             '🎸': 'Clown',
